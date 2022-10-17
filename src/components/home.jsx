@@ -4,27 +4,24 @@ export default class Home extends React.Component{
 {
     super(props);
     this.state = {
-        nom:'',
-        prenom:''
+        task:'',
     }
     this.handleSubmit=this.handleSubmit.bind(this);
 }
 onChange= e=> {
-    this.setState({ [e.target.name] :e.target.value});
+    this.setState({ [e.target.task] :e.target.value});
 };
 handleSubmit(event)
 {
-    alert("Bonjour "+this.state.nom+" "+ this.state.prenom);
+    
     event.preventDefault();
 }
 render(){
     return(
         <div>
             <form onSubmit={this.handleSubmit}>
-                <h1>Profil de {this.state.nom+" "+this.state.prenom}</h1>
-                Nom:<input type="text" value={this.state.nom} onChange={this.onChange} name="nom"></input>
-                Prenom:<input type="text" value={this.state.prenom} name="prenom" onChange={this.onChange}></input>
-                <button type="submit" >Afficher message</button>
+               <input type="text" value={this.state.task} onChange={this.onChange} name="task"></input>
+                <button type="submit" >Ajouter tâche</button>
             </form>
         </div>);
 }
