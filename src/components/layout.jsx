@@ -12,7 +12,6 @@ return (
 </li>
 </ul>
 </nav>
-<Outlet />
 </>
 )
 };
