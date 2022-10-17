@@ -14,7 +14,7 @@ import React from 'react';
     this.handleSubmit=this.handleSubmit.bind(this);
 }
 onChange= e=> {
-    this.setState({ [e.target.task] :e.target.value});
+    this.setState({ [e.target.name] :e.target.value});
 };
 handleSubmit(event)
 {
